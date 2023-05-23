@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "dev.igokoro.bookworm.cards.storage";
+option java_multiple_files = true;
+
+message StoredCards {
+  repeated LibraryCardProto cards = 1;
+}
+
+message LibraryCardProto {
+  string id = 1;
+  Owner owner = 2;
+  string expiration = 3;
+}
+
+message Owner {
+  string firstName = 1;
+  string lastName = 2;
+}
